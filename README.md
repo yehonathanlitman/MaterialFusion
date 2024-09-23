@@ -27,7 +27,7 @@ pip install imageio PyOpenGL glfw xatlas gdown wget kornia diffusers["torch"] tr
 
 BlenderVault is a curated dataset containing 11,709 synthetic Blender objects designed by artists. The objects are diverse in nature and contain high quality property assets that are extracted and used to generate training data for our material diffusion prior. The object files are available for download <a href="https://cmu.app.box.com/folder/285937780047?s=d4lrsn8iwsfgeczr6hpjm7ng5ifkcjah">here</a>. Due to size, the dataset was split into 12 partitions.
 
-https://github.com/user-attachments/assets/5a25aa21-cb0b-47e4-80fd-c2e531a73885
+<video controls autoplay src="https://github.com/user-attachments/assets/4911d735-77a5-41b5-8d90-f8296efd726b"></video>
 
 ## Downloading
 
@@ -98,7 +98,20 @@ python run_stablematerial.py --data_path data/stablematerial_dataset/<object_id>
 
 Results will be saved in `out/stablematerial_pred/multi_view/<object_id>`.
 
-![stablematerial](https://github.com/user-attachments/assets/cedafc80-9979-4e6b-ba4f-4613328c2f54)
+![stablematerial](https://github.com/user-attachments/assets/7f42741a-7a50-4fd4-ae5b-0349e0229f27)
+
+# Citation
+
+If you use any parts of our work, please cite the following:
+
+```
+@article{litman2024materialfusion,
+  author    = {Yehonathan Litman and Or Patashnik and Kangle Deng and Aviral Agrawal and Rushikesh Zawar and Fernando De la Torre and Shubham Tulsiani},
+  title     = {MaterialFusion: Enhancing Inverse Rendering with Material Diffusion Priors},
+  journal   = {ArXiv},
+  year      = {2024}
+}
+```
 
 # Acknowledgments
 

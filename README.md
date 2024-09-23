@@ -2,7 +2,7 @@
 
 #####  <p align="center"> [Yehonathan Litman](https://yehonathanlitman.github.io/), [Or Patashnik](https://orpatashnik.github.io/), [Kangle Deng](https://dunbar12138.github.io/), [Aviral Agrawal](https://aviral-agrawal.github.io/), [Rushikesh Zawar](https://github.com/RBZ-99),<br> [Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/), [Shubham Tulsiani](https://shubhtuls.github.io/)</p>
  
-#### <p align="center">[Paper](https://arxiv.org/abs/TODO) | [Project Page](https://yehonathanlitman.github.io/material_fusion/) 
+#### <p align="center">[Paper](https://arxiv.org/abs/TODO) | <a href="https://cmu.app.box.com/folder/285937780047?s=d4lrsn8iwsfgeczr6hpjm7ng5ifkcjah">BlenderVault</a> | [Project Page](https://yehonathanlitman.github.io/material_fusion/) 
 <!-- | [BlenderVault Dataset](assets/todo.txt)</p> -->
 
 ![Teaser image](assets/teaser_fig.svg)
@@ -25,7 +25,7 @@ pip install imageio PyOpenGL glfw xatlas gdown wget kornia diffusers["torch"] tr
 
 ## BlenderVault
 
-BlenderVault is a curated dataset containing 11,716 synthetic Blender objects designed by artists. The objects are diverse in nature and contain high quality property assets that are extracted and used to generate training data for our material diffusion prior. We are currently preparing this dataset and will upload all the files soon!
+BlenderVault is a curated dataset containing 11,709 synthetic Blender objects designed by artists. The objects are diverse in nature and contain high quality property assets that are extracted and used to generate training data for our material diffusion prior. The object files are available for download <a href="https://cmu.app.box.com/folder/285937780047?s=d4lrsn8iwsfgeczr6hpjm7ng5ifkcjah">here</a>. Due to size, the dataset was split into 12 partitions.
 
 https://github.com/user-attachments/assets/5a25aa21-cb0b-47e4-80fd-c2e531a73885
 
@@ -43,7 +43,7 @@ If you would like to download the datasets individually, follow the links below 
 
 * [StableMaterial Dataset](https://drive.google.com/file/d/1qGP4rbKRJk1LLtffWmTpaZspDHjl1y_o/view?usp=sharing) - This dataset contains 4 images per object for 8 unseen objects from BlenderVault for evaluating the material diffusion prior. Extract them into `data/stablematerial_dataset`.
 
-* [Stanford-ORB](https://stanfordorb.github.io/) - Download and extract [`blender_LDR.tar.gz`](https://downloads.cs.stanford.edu/viscam/StanfordORB/blender_LDR.tar.gz) into `data/blender_LDR`. We will upload the config files for Stanford-ORB objects soon!
+* [Stanford-ORB](https://stanfordorb.github.io/) - Download and extract [`blender_LDR.tar.gz`](https://downloads.cs.stanford.edu/viscam/StanfordORB/blender_LDR.tar.gz) into `data/blender_LDR`. We will upload the config files and dataloader for Stanford-ORB objects soon!
 
 ### Preparing your own data
 

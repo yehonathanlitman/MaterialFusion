@@ -2,8 +2,7 @@
 
 #####  <p align="center"> [Yehonathan Litman](https://yehonathanlitman.github.io/), [Or Patashnik](https://orpatashnik.github.io/), [Kangle Deng](https://dunbar12138.github.io/), [Aviral Agrawal](https://aviral-agrawal.github.io/), [Rushikesh Zawar](https://github.com/RBZ-99),<br> [Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/), [Shubham Tulsiani](https://shubhtuls.github.io/)</p>
  
-#### <p align="center">[Paper](https://arxiv.org/abs/TODO) | <a href="https://cmu.app.box.com/folder/285937780047?s=d4lrsn8iwsfgeczr6hpjm7ng5ifkcjah">BlenderVault</a> | [Project Page](https://yehonathanlitman.github.io/material_fusion/) 
-<!-- | [BlenderVault Dataset](assets/todo.txt)</p> -->
+#### <p align="center">[Paper](https://arxiv.org/abs/2409.15273) | <a href="https://cmu.app.box.com/folder/285937780047?s=d4lrsn8iwsfgeczr6hpjm7ng5ifkcjah">BlenderVault</a> | [Project Page](https://yehonathanlitman.github.io/material_fusion/) 
 
 ![Teaser image](assets/teaser_fig.svg)
 

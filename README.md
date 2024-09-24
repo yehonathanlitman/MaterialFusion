@@ -40,7 +40,7 @@ If you would like to download the datasets individually, follow the links below 
 
 * [MaterialFusion Dataset](https://drive.google.com/file/d/1xcmn6AO1KL22qcWjWc8cm31D8xR4LBrQ/view?usp=sharing) - This is a dataset containing multi-view images of 9 unseen objects from BlenderVault. Extract them into `data/materialfusion_dataset`.
 
-* [StableMaterial Dataset](https://drive.google.com/file/d/1qGP4rbKRJk1LLtffWmTpaZspDHjl1y_o/view?usp=sharing) - This dataset contains 4 images per object for 8 unseen objects from BlenderVault for evaluating the material diffusion prior. Extract them into `data/stablematerial_dataset`.
+* [StableMaterial Dataset](https://drive.google.com/file/d/169jJsEji7BW4QXQasqK0ReLwJQC7tnck/view?usp=sharing) - This dataset contains 4 images per object for 8 unseen objects from BlenderVault for evaluating the material diffusion prior. Extract them into `data/stablematerial_dataset`.
 
 * [Stanford-ORB](https://stanfordorb.github.io/) - Download and extract [`blender_LDR.tar.gz`](https://downloads.cs.stanford.edu/viscam/StanfordORB/blender_LDR.tar.gz) into `data/blender_LDR`. We will upload the config files and dataloader for Stanford-ORB objects soon!
 

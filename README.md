@@ -73,7 +73,7 @@ The model checkpoints can be downloaded with the `data/download_stablematerial_c
 
 * [StableMaterial](https://drive.google.com/file/d/1RDk3cvci1BPAVDWrk2ZzLLPwIlTLkt_4/view?usp=sharing) - Extract this into `data/stablematerial-model`.
 
-* [StableMaterial-MV](https://drive.google.com/file/d/1qGP4rbKRJk1LLtffWmTpaZspDHjl1y_o/view?usp=sharing) - This checkpoint attends to information across views to predict materials that are consistent across multiple views. This helps with difficult views, as seen in the cup example below. Extract this into `data/stablematerial-mv-model`.
+* [StableMaterial-MV](https://drive.google.com/file/d/1J6EmhgXyjKgNa1prz7PckrsV5GsfvFXl/view?usp=sharing) - This checkpoint attends to information across views to predict materials that are consistent across multiple views. This helps with difficult views, as seen in the cup example below. Extract this into `data/stablematerial-mv-model`.
 
 ### Preparing your own data
 

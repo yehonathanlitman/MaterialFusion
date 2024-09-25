@@ -107,7 +107,7 @@ If you use any parts of our work, please cite the following:
 @article{litman2024materialfusion,
   author    = {Yehonathan Litman and Or Patashnik and Kangle Deng and Aviral Agrawal and Rushikesh Zawar and Fernando De la Torre and Shubham Tulsiani},
   title     = {MaterialFusion: Enhancing Inverse Rendering with Material Diffusion Priors},
-  journal   = {ArXiv},
+  journal   = {arXiv preprint arXiv:2409.15273},
   year      = {2024}
 }
 ```

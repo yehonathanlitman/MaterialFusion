@@ -123,13 +123,13 @@ if __name__ == "__main__":
         "--model_id",
         type=str,
         help="Path to Stable Material model directory",
-        default="data/stablematerial-model"
+        default="thebluser/stable-material"
     )
     parser.add_argument(
         "--mv_model_id",
         type=str,
         help="Path to Stable Material multi-view model directory",
-        default="data/stablematerial-mv-model"
+        default="thebluser/stable-material-mv"
     )
     parser.add_argument(
         "--num_views",
@@ -165,11 +165,11 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     args.pre_load = True
-    args.spp = 1
+    args.spp = 16
     args.cam_near_far = [args.cam_near, args.cam_far]
 
     if args.num_views > 1:
-        pipe = StableMaterialPipelineMV.from_pretrained(args.mv_model_id, torch_dtype=torch.float16).to("cuda")
+        pipe = StableMaterialPipelineMV.from_pretrained(args.mv_model_id, torch_dtype=torch.float16, trust_remote_code=True).to("cuda")
         predict_mv(pipe, args)
     else:
         pipe = StableMaterialPipeline.from_pretrained(args.model_id, torch_dtype=torch.float16).to("cuda")

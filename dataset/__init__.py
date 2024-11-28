@@ -9,4 +9,5 @@
 from .dataset import Dataset
 from .dataset_mesh import DatasetMesh
 from .dataset_nerf import DatasetNERF
+from .dataset_nerf_train import DatasetNERFTrain
 from .dataset_llff import DatasetLLFF

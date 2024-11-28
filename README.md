@@ -12,13 +12,13 @@
 #### Tested on Pop OS 24.04 + Pytorch 2.1.2 using a RTX6000
 
 ```
-conda create -n materialfusion python=3.8
+conda create -n materialfusion python=3.10
 conda activate materialfusion
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 pip install git+https://github.com/NVlabs/nvdiffrast/
-pip install imageio PyOpenGL glfw xatlas gdown wget kornia diffusers["torch"] transformers
+pip install imageio PyOpenGL glfw xatlas gdown wget kornia diffusers["torch"] transformers bpy numpy==1.26.4 scipy lpips
 ```
 
 # Datasets
@@ -43,7 +43,7 @@ If you would like to download the datasets individually, follow the links below 
 
 * [StableMaterial Dataset](https://drive.google.com/file/d/169jJsEji7BW4QXQasqK0ReLwJQC7tnck/view?usp=sharing) - This dataset contains 4 images per object for 8 unseen objects from BlenderVault for evaluating the material diffusion prior. Extract them into `data/stablematerial_dataset`.
 
-* [Stanford-ORB](https://stanfordorb.github.io/) - Download and extract [`blender_LDR.tar.gz`](https://downloads.cs.stanford.edu/viscam/StanfordORB/blender_LDR.tar.gz) into `data/blender_LDR`. We will upload the config files and dataloader for Stanford-ORB objects soon!
+* [Stanford-ORB](https://stanfordorb.github.io/) - Download and extract [`blender_LDR.tar.gz`](https://downloads.cs.stanford.edu/viscam/StanfordORB/blender_LDR.tar.gz) into `data/blender_LDR`.
 
 ### Preparing your own data
 
@@ -68,17 +68,25 @@ Once you are done training MaterialFusion, the output folder will contain the re
 
 # StableMaterial - Material Diffusion Prior
 
-We also provide inference (and soon training) code for our material diffusion prior.
+We also provide the inference and training code for our material diffusion prior.
 
-The model checkpoints can be downloaded with the `data/download_stablematerial_ckpts.py` script. For simplicity, we provide checkpoints for the single-view and multi-view models.
+The model checkpoints are on HuggingFace and will be downloaded automatically. For simplicity, we provide checkpoints for the single-view and multi-view models.
 
-* [StableMaterial](https://drive.google.com/file/d/1RDk3cvci1BPAVDWrk2ZzLLPwIlTLkt_4/view?usp=sharing) - Extract this into `data/stablematerial-model`.
+To train the StableMaterial, render some data using `render_blender.py` and call:
 
-* [StableMaterial-MV](https://drive.google.com/file/d/1J6EmhgXyjKgNa1prz7PckrsV5GsfvFXl/view?usp=sharing) - This checkpoint attends to information across views to predict materials that are consistent across multiple views. This helps with difficult views, as seen in the cup example below. Extract this into `data/stablematerial-mv-model`.
+```
+python train_stablematerial.py --train_data_dir /path/to/blender_renders --run_name my_run --train_batch_size 4
+```
 
 ### Preparing your own data
 
-StableMaterial doesn't need pose information and only assumes masked images. StableMaterial-MV requires pose information in addition to masked images.
+StableMaterial doesn't need pose information and only assumes masked images. StableMaterial-MV requires pose information in addition to masked images. After downloading BlenderVault or Objaverse `.glb` files, you can use `render_blender.py`:
+
+```
+python render_blender.py --objects_path /path/to/objects
+```
+
+The resulting dataset will be stored in `blender_output/blender_renders`.
 
 ## Evaluation
 
@@ -99,6 +107,14 @@ python run_stablematerial.py --data_path data/stablematerial_dataset/<object_id>
 Results will be saved in `out/stablematerial_pred/multi_view/<object_id>`.
 
 ![stablematerial](https://github.com/user-attachments/assets/7f42741a-7a50-4fd4-ae5b-0349e0229f27)
+
+## Misc.
+
+The StableMaterial checkpoints can be downloaded with the `data/download_stablematerial_ckpts.py` script.
+
+* [StableMaterial](https://drive.google.com/file/d/1RDk3cvci1BPAVDWrk2ZzLLPwIlTLkt_4/view?usp=sharing) - Extract this into `data/stablematerial-model`.
+
+* [StableMaterial-MV](https://drive.google.com/file/d/1J6EmhgXyjKgNa1prz7PckrsV5GsfvFXl/view?usp=sharing) - This checkpoint attends to information across views to predict materials that are consistent across multiple views. This helps with difficult views, as seen in the cup example above. Extract this into `data/stablematerial-mv-model`.
 
 # Citation
 
